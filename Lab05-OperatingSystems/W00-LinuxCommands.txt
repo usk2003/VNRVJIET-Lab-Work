@@ -1,0 +1,159 @@
+1. Print hello world
+echo "Hello World"
+
+2. Addition of two numbers
+echo -n "Enter number 1: "
+read NUM1
+echo -n "Enter number 2: "
+read NUM2
+SUM=$(($NUM1 + $NUM2))
+echo "The sum is $SUM"
+
+3. Biggest of two numbers
+NUM1=5
+NUM2=12
+if [ $NUM1 -gt $NUM2 ]
+then
+  echo "NUM1 > NUM2"
+else
+  echo "NUM2 > NUM1"
+fi
+
+4. To check whether the given number is positive or not
+echo -n "Enter a number: "
+read NUM
+if [ $NUM -gt 0 ]
+then
+  echo "$NUM is +ve"
+elif [ $NUM -lt 0 ]
+then
+  echo "$NUM is -ve"
+else
+  echo "$NUM is 0"
+fi
+echo "done"
+
+5. Write a shell program to check whether the given character is a vowel or not
+echo -n "Enter a character: "
+read CHAR
+case $CHAR in
+  a|A) echo "You entered $CHAR which is a vowel" ;;
+  e|E) echo "You entered $CHAR which is a vowel" ;;
+  i|I) echo "You entered $CHAR which is a vowel" ;;
+  o|O) echo "You entered $CHAR which is a vowel" ;;
+  u|U) echo "You entered $CHAR which is a vowel" ;;
+  *) echo "You entered $CHAR which is not a vowel" ;;
+esac
+
+6. Case statement example
+echo -n "Oceans are larger than lakes (True or False): "
+read USER_INPUT
+case $USER_INPUT in
+  "TRUE" | "True" | "true") echo "Yes, you are right" ;;
+  "FALSE" | "False" | "false") echo "No, you are wrong" ;;
+  *) echo "Please enter either True or False" ;;
+esac
+
+7. String comparison
+STR1="Mani"
+STR2="sha"
+if [ "${STR1}" = "${STR2}" ]
+then
+  echo "Strings match"
+else
+  echo "Strings don't match"
+fi
+
+8. Logical operators
+echo -n "Enter a NUM: "
+read NUM
+# Check whether a number is between 10 and 20 (Using AND -a operator)
+if [ $NUM -ge 10 -a $NUM -le 20 ]
+then
+  echo "$NUM is between 10 and 20"
+else
+  echo "$NUM is NOT between 10 and 20"
+fi
+
+echo -n "Enter another NUM: "
+read NUM
+# Check whether a number is between 10 and 20 (Using OR -o operator)
+if [ $NUM -lt 10 -o $NUM -gt 20 ]
+then
+  echo "$NUM is NOT between 10 and 20"
+else
+  echo "$NUM is between 10 and 20"
+fi
+
+9. While loop
+COUNT=0
+while [ $COUNT -lt 5 ]
+do
+  echo "Loop count is $COUNT"
+  COUNT=$((COUNT + 1))
+done
+echo "Done"
+
+10. While loop example
+echo -n "Enter a number: "
+read NUM
+SUM=0
+I=1
+while [ $I -le $NUM ]
+do
+  SUM=$((SUM + I))
+  I=$((I + 1))
+done
+echo "The sum of the first $NUM numbers is: $SUM"
+
+11. For loop
+COUNT=0
+for ((i = 0; i < 5; i++))
+do
+  COUNT=$((COUNT + 1))
+  echo "Loop count is $COUNT"
+done
+echo "Done"
+
+12. Functions
+# Function definition
+function print_hello() {
+  echo "========="
+  echo "==hello=="
+  echo "========="
+}
+
+# Call the function
+print_hello
+
+13. A script to show the usage of functions and how to pass arguments
+# Function definition
+function find_sum() {
+  SUM=$(($1 + $2))
+  echo "The sum is $SUM"
+}
+
+# Pass arguments 10 and 20 to find_sum function
+find_sum 10 20
+
+14. A script to show how to declare an array and access its elements
+# Declare an array
+FRUITS=(apple mango banana orange)
+
+# Print value of each element
+echo "element 0: ${FRUITS[0]}"
+echo "element 1: ${FRUITS[1]}"
+echo "element 2: ${FRUITS[2]}"
+echo "element 3: ${FRUITS[3]}"
+
+# Print size / length of array
+echo "Length: ${#FRUITS[@]}"
+echo "Whole array: ${FRUITS[@]}"
+echo "Whole array: ${FRUITS[*]}"
+
+# Looping over array elements
+echo "Looping over array elements"
+for ITEM in ${FRUITS[@]}
+do
+  echo "$ITEM"
+done
