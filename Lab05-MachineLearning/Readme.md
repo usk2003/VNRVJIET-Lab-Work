@@ -26,10 +26,3 @@ This repository contains all the machine learning lab programs implemented as pa
 - 🔹 Code with real-world datasets  
 - 🔹 Adheres to R22 regulation standards under JNTUH  
 
----
-
-## 💡 **How to Use**  
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/usk2003/Lab-MachineLearning.git
-
