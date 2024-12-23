@@ -1,0 +1,68 @@
+W03-Basic Networking Commands
+1.	TRACERT:
+The tracert command prints the path. If all routers on the path are functional, this command prints the full path. If a router is down on the path, this command prints the path up to the last operational router.
+
+This command is used to diagnose path-related problems. On an IP network, routers exchange IP packets between the source and the destination. They take IP packets from the source host and forward them in a sequence until they reach the destination host. The sequence of routers between the source and destination is known as the path. A path consists of all routers in a sequence that IP packets sent from the source host traverse to reach the destination host.
+
+	Command:
+tracert www.google.co.in
+
+
+2.	Ping
+The ping command is used to test connectivity between two hosts. It sends ICMP echo request messages to the destination. The destination host replies with ICMP reply messages. If the ping command gets a reply from the destination host, it displays the reply along with round-trip times.
+	Command:
+ping google.com
+
+
+3.	Ipconfig
+This command displays all current TCP/IP network configuration values and refreshes Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings. This command is mainly used to view the IP addresses on the computers that are configured to obtain their IP address automatically.
+
+Command : ipconfig
+
+
+4.	ARP
+
+To send IP packets, a computer needs two addresses. These addresses are the MAC address and the IP address. A MAC address is the physical or hardware address of the NIC. An IP address is the logical or software address of NIC. If a computer knows the IP address of the destination computer but it does not know the MAC address of the destination computer, it uses the ARP protocol to know the MAC address of the destination computer.
+
+The ARP protocol broadcasts a given IP address over a local network. The corresponding host responds to the broadcast with its MAC address. To avoid repetition, ARP stores the answer in a table known as ARP table. ARP maintains a separate ARP table for each NIC.
+
+Command: arp
+
+
+5.	Netstat
+This command displays active connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, and IP statistics.
+
+The output of this command is organized in rows and columns. Each row represents a new connection or an entry in the output. It contains four columns. These columns provide the following information about the row.
+
+Command : netstat
+
+
+6.	nslookup
+The nslookup command queries the DNS to obtain domain names or IP address mapping. It's useful for verifying if a domain resolves correctly.
+
+Command: nslookup www.google.com
+
+
+7.	dig
+The dig (Domain Information Groper) command retrieves DNS records, such as A, MX, or TXT, for troubleshooting DNS issues.
+command : dig www.google.com
+
+
+8.	curl
+The curl command transfers data from or to a server using protocols like HTTP, FTP, or SCP. It is useful for testing API endpoints.
+Command: curl https://example.com
+
+
+9.	FTP (File Transfer Protocol)
+Used to tranfer files between computer on a network
+Command : ftp<hostname>
+
+
+10.	Netsh
+A Windows utility for configuring and troubleshooting network settings.
+Command: netsh wlan show profiles
+
+
+11.	Route:
+Displays or modifies the network routing table.
+Command : route-n

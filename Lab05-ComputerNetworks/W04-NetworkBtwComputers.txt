@@ -1,0 +1,58 @@
+Week - 04
+Establishing a Network between Computers
+
+1. Understand Your Networking Needs
+•	Type of Network: Determine if you need a wired (Ethernet) or wireless (Wi-Fi) network.
+•	Number of Devices: Assess how many devices will connect to the network and whether you need switches or additional access points.
+
+2. Gather Necessary Equipment
+•	Router: For connecting multiple devices and sharing internet access.
+•	Switch: For expanding wired connections in larger networks.
+•	Ethernet Cables: For wired connections.
+•	Wireless Access Point (Optional): To extend the range of your wireless network.
+•	Computers and Devices: Ensure they have network adapters (wired or wireless).
+
+3. Set Up a Wired Network
+•	Connect the Router:
+o	Plug the router into a power source and connect it to your modem using an Ethernet cable.
+•	Connect Computers to the Router:
+o	Use Ethernet cables to connect the computers to the router’s LAN ports.
+•	Test the Connection:
+o	Check each computer’s network settings to ensure they obtain an IP address from the router.
+•	Share Resources:
+o	Enable file and printer sharing on all computers.
+
+4. Set Up a Wireless Network
+•	Configure the Router:
+o	Log in to the router’s admin page (typically accessed via a web browser at an address).
+o	Set a Wi-Fi name (SSID) and a strong password for security.
+•	Connect Devices:
+o	On each computer, select the Wi-Fi network and enter the password.
+•	Secure the Network:
+o	Use WPA3 or WPA2 encryption to protect your wireless network.
+
+5. Assign Static or Dynamic IPs
+•	By default, most networks use DHCP to assign dynamic IP addresses.
+•	For better control in larger networks, you may assign static IPs to key devices like servers or printers.
+
+6. Test the Network
+•	Ping other computers on the network to check connectivity:
+o	ping <IP_address_of_other_computer>
+•	Use shared drives or printers to ensure everything works.
+
+7. Enable Resource Sharing
+•	On Windows:
+1.	Go to Control Panel > Network and Sharing Center > Advanced Sharing Settings.
+2.	Enable File and Printer Sharing and set network discovery to on.
+•	On macOS:
+o	Go to System Preferences > Sharing and select the resources to share.
+•	On Linux:
+o	Use tools like Samba for file sharing.
+
+8. Troubleshoot Common Issues
+•	No Internet Access:
+o	Ensure the router is connected to the modem and the settings are correct.
+•	Device Not Detected:
+o	Check network adapter drivers or settings.
+•	Slow Speeds:
+o	Optimize router placement or upgrade to a gigabit router for wired connections.

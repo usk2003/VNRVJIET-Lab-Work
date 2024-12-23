@@ -1,0 +1,48 @@
+Week - 05
+Configuring FTP Server for File Sharing
+
+1. Understand FTP
+•	FTP Server: A computer that hosts files and allows users to upload or download them.
+•	FTP Clients: Applications used to connect to the server (e.g., FileZilla, WinSCP).
+•	Protocol: FTP can operate in plain text or securely using FTPS (SSL/TLS) or SFTP (SSH-based).
+
+2. Prerequisites
+•	Server Machine: A dedicated computer or virtual machine to act as the FTP server.
+•	FTP Software: Examples include:
+o	Windows: IIS (Internet Information Services) or FileZilla Server.
+o	Linux: vsftpd, proftpd, or pure-ftpd.
+•	Network Configuration: Ensure the server has a static IP or domain name.
+
+3. Install and Configure FTP Server
+On Windows (Using FileZilla Server):
+1.	Download and Install FileZilla Server:
+o	Download FileZilla Server.
+2.	Configure Server:
+o	Launch FileZilla Server Interface.
+o	Set the host (IP address), port (default: 21), and admin password.
+3.	Create Users and Directories:
+o	Go to Edit > Users.
+o	Add a new user, set a password, and assign a directory.
+4.	Enable Firewall Rules:
+o	Open Control Panel > System and Security > Windows Defender Firewall.
+o	Add an inbound rule to allow traffic on port 21.
+
+4. Secure the FTP Server
+•	Use FTPS or SFTP:
+o	Enable SSL/TLS for secure connections (FTPS).
+o	Alternatively, use SFTP if SSH is available.
+•	Limit Access:
+o	Restrict FTP users to specific directories.
+o	Disable anonymous access.
+•	Enable Strong Passwords:
+o	Require users to set strong passwords.
+
+5. Connect to the FTP Server
+•	Using an FTP Client (e.g., FileZilla):
+1.	Open FileZilla Client.
+2.	Enter the server’s IP address, username, password, and port (default: 21).
+3.	Connect to start transferring files.
+
+6. Test the Server
+•	Test uploading and downloading files.
+•	Verify permissions to ensure users can only access their designated directories.
